@@ -75,7 +75,8 @@ int main() {
             randyRandom->superGlide();
             randyRandom->spectatorView();
             randyRandom->SkinChange();
-            
+            randyRandom->miniMapRadar();
+
             //check how fast we completed all the processing and if we still have time left to sleep
             int processingTime = static_cast<int>(util::currentEpochMillis() - startTime);
             int goalSleepTime = 6; // 16.67ms=60HZ | 6.97ms=144HZ
