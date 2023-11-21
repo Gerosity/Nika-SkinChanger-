@@ -30,6 +30,7 @@ struct ConfigLoader {
     std::string AIMBOT_ACTIVATED_BY_BUTTON = "XK_Shift_L";
     std::string FEATURE_QUICKTURN_BUTTON = "XK_f";
     std::string FEATURE_PRINT_LEVELS_BUTTON = "XK_p";
+    std::string FEATURE_MAP_RADAR_BUTTON = "XK_m";
     float AIMBOT_SMOOTH = 20.211;
     float AIMBOT_SPEED = 40.211;
     float AIMBOT_SMOOTH_EXTRA_BY_DISTANCE = 1000;
@@ -79,6 +80,7 @@ struct ConfigLoader {
         FEATURE_PRINT_LEVELS_ON = (key.compare("FEATURE_PRINT_LEVELS_ON") != 0) ? FEATURE_PRINT_LEVELS_ON : toBool(val); 
         FEATURE_PRINT_LEVELS_BUTTON = (key.compare("FEATURE_PRINT_LEVELS_BUTTON") != 0) ? FEATURE_PRINT_LEVELS_BUTTON : trimConstructive(val);
         FEATURE_MAP_RADAR_ON = (key.compare("FEATURE_MAP_RADAR_ON") != 0) ? FEATURE_MAP_RADAR_ON : toBool(val); 
+        FEATURE_MAP_RADAR_BUTTON = (key.compare("FEATURE_MAP_RADAR_BUTTON") != 0) ? FEATURE_MAP_RADAR_BUTTON : trimConstructive(val);
         }
 
     void print() {
@@ -96,6 +98,7 @@ struct ConfigLoader {
         printf("FEATURE_PRINT_LEVELS_ON\t\t\t\t\t%s\n", FEATURE_PRINT_LEVELS_ON ? "YES" : "NO");
         printf("FEATURE_PRINT_LEVELS_BUTTON\t\t\t\t%s\n", FEATURE_PRINT_LEVELS_BUTTON.c_str());
         printf("FEATURE_MAP_RADAR_ON\t\t\t\t\t%s\n", FEATURE_MAP_RADAR_ON ? "YES" : "NO");
+        printf("FEATURE_MAP_RADAR_BUTTON\t\t\t\t%s\n", FEATURE_MAP_RADAR_BUTTON.c_str());
         printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         //gameMode
         printf("IS_GAME_BR\t\t\t\t\t\t%s\n", IS_GAME_BR ? "YES" : "NO");
