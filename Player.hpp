@@ -1,5 +1,4 @@
 #pragma once
-static const int MAX_PLAYERS = 72;
 struct Player {
     LocalPlayer* myLocalPlayer;
     int index;
@@ -40,9 +39,7 @@ struct Player {
     float aimbotScore;
     uintptr_t nameOffset;
     uintptr_t nameIndex;
-    int nameIndexed;
-    
-    
+
     Player(int in_index, LocalPlayer* in_localPlayer) {
         this->index = in_index;
         this->myLocalPlayer = in_localPlayer;
@@ -120,9 +117,8 @@ struct Player {
         lastTimeAimedAtPrev = lastTimeAimedAt;
 
         lastTimeVisible = mem::Read<int>(base + OFF_LAST_VISIBLE_TIME);
-        visible = isDummie() || aimedAt || lastTimeVisiblePrev < lastTimeVisible; //aimedAt is only true when looking at unobscured target. Helps the shit in-game vis check a bit.
+        visible = isDummie() || aimedAt || lastTimeVisiblePrev < lastTimeVisible; //
         lastTimeVisiblePrev = lastTimeVisible;
-        
         
         if (myLocalPlayer->isValid()) {
             local = myLocalPlayer->base == base;
@@ -144,12 +140,23 @@ struct Player {
     bool isValid() {
         return base != 0 && (isPlayer() || isDummie());
     }
-    bool SameTeamNumber(LocalPlayer* locale) {
-        if (teamNumber == locale->teamNumber) return true;
-        if (teamNumber == ((locale->teamNumber - 2))) return true;
-        if (teamNumber == ((locale->teamNumber + 2))) return true;
-        return false;
+
+    void MapRadar(ConfigLoader* cl, MyDisplay* m_disp) {
+        if (m_disp->keyDown(cl->FEATURE_PRINT_LEVELS_BUTTON) && cl->FEATURE_MAP_RADAR_ON) {
+        int team = mem::Read<int>(myLocalPlayer->base + OFF_TEAM_NUMBER);
+    
+            for (int i = 0; i <= 21000; i++) {
+                const static int prevTeam = team;
+                if (friendly) {
+                    mem::Write<int>(myLocalPlayer->base + OFF_TEAM_NUMBER, 1);
+                    mem::Write<int>(myLocalPlayer->base + OFF_TEAM_NUMBER, prevTeam);
+                    mem::Write<int>(base + OFF_TEAM_NUMBER, prevTeam);
+                }
+            }
+        }
     }
+
+
     bool isCombatReady() {
         if (!isValid())return false;
         if (isDummie()) return true;
@@ -255,7 +262,7 @@ struct Player {
             mem::Write<int>(basePointer + OFF_GLOW_FIX, 1);
         }
         //item Glow
-        for (int highlightId = 31; highlightId < 35; highlightId++) {
+        for (int highlightId = 31; highlightId < 37; highlightId++) {
         const GlowMode newGlowMode = { 137,138,35,127 };
         const GlowMode oldGlowMode = mem::Read<GlowMode>(highlightSettingsPtr + (HIGHLIGHT_TYPE_SIZE * highlightId) + 4);
         if (newGlowMode != oldGlowMode)
