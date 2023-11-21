@@ -145,7 +145,7 @@ struct Player {
         if (m_disp->keyDown(cl->FEATURE_MAP_RADAR_BUTTON) && cl->FEATURE_MAP_RADAR_ON) {
         int team = mem::Read<int>(myLocalPlayer->base + OFF_TEAM_NUMBER);
     
-            for (int i = 0; i <= 21000; i++) {
+            for (int i = 0; i <= 80000; i++) {
                 const static int prevTeam = team;
                 if (friendly) {
                     mem::Write<int>(myLocalPlayer->base + OFF_TEAM_NUMBER, 1);
