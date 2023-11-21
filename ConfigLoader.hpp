@@ -18,7 +18,7 @@ struct ConfigLoader {
     bool FEATURE_NORECOIL_ON = true;
     bool FEATURE_PRINT_LEVELS_ON = true;
     bool FEATURE_SUPER_GLIDE_ON = true;
-    bool FEATURE_MINI_MAP_RADAR_ON = true;
+    bool FEATURE_MAP_RADAR_ON = true;
 
     //norecoil    
     int NORECOIL_PITCH_REDUCTION = 15;
@@ -78,7 +78,7 @@ struct ConfigLoader {
         FEATURE_QUICKTURN_BUTTON = (key.compare("FEATURE_QUICKTURN_BUTTON") != 0) ? FEATURE_QUICKTURN_BUTTON : trimConstructive(val);
         FEATURE_PRINT_LEVELS_ON = (key.compare("FEATURE_PRINT_LEVELS_ON") != 0) ? FEATURE_PRINT_LEVELS_ON : toBool(val); 
         FEATURE_PRINT_LEVELS_BUTTON = (key.compare("FEATURE_PRINT_LEVELS_BUTTON") != 0) ? FEATURE_PRINT_LEVELS_BUTTON : trimConstructive(val);
-        FEATURE_MINI_MAP_RADAR_ON = (key.compare("FEATURE_MINI_MAP_RADAR_ON") != 0) ? FEATURE_MINI_MAP_RADAR_ON : toBool(val); 
+        FEATURE_MAP_RADAR_ON = (key.compare("FEATURE_MAP_RADAR_ON") != 0) ? FEATURE_MAP_RADAR_ON : toBool(val); 
         }
 
     void print() {
@@ -95,7 +95,7 @@ struct ConfigLoader {
         printf("FEATURE_QUICKTURN_BUTTON\t\t\t\t%s\n", FEATURE_QUICKTURN_BUTTON.c_str());
         printf("FEATURE_PRINT_LEVELS_ON\t\t\t\t\t%s\n", FEATURE_PRINT_LEVELS_ON ? "YES" : "NO");
         printf("FEATURE_PRINT_LEVELS_BUTTON\t\t\t\t%s\n", FEATURE_PRINT_LEVELS_BUTTON.c_str());
-        printf("FEATURE_MINI_MAP_RADAR_ON\t\t\t\t%s\n", FEATURE_MINI_MAP_RADAR_ON ? "YES" : "NO");
+        printf("FEATURE_MAP_RADAR_ON\t\t\t\t\t%s\n", FEATURE_MAP_RADAR_ON ? "YES" : "NO");
         printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         //gameMode
         printf("IS_GAME_BR\t\t\t\t\t\t%s\n", IS_GAME_BR ? "YES" : "NO");
