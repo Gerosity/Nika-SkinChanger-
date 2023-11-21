@@ -37,7 +37,6 @@ struct TriggerBot {
             weaponId != WEAPON_TRIPLE_TAKE &&
             weaponId != WEAPON_BOCEK &&
             weaponId != WEAPON_PROWLER &&
-            weaponId != WEAPON_ALTERNATOR &&
             weaponId != WEAPON_NEMESIS
             )return;
 
