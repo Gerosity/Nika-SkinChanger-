@@ -19,7 +19,7 @@ int main() {
     for (int i = 0; i < 70; i++) humanPlayers->push_back(new Player(i, localPlayer));
     for (int i = 0; i < 15000; i++) dummyPlayers->push_back(new Player(i, localPlayer));
 
-
+    
     //create features     
     NoRecoil* noRecoil = new NoRecoil(cl, display, level, localPlayer);
     TriggerBot* triggerBot = new TriggerBot(cl, display, localPlayer, players);
@@ -62,8 +62,11 @@ int main() {
                 for (int i = 0; i < humanPlayers->size(); i++) {
                     Player* p = humanPlayers->at(i);
                     p->readFromMemory(cl);
+                    
                     if (p->isValid()) players->push_back(p);
+                    p->MapRadar(cl, display);
                 }
+                
             //run features       
             noRecoil->controlWeapon(counter);
             triggerBot->shootAtEnemy(counter);
@@ -75,7 +78,6 @@ int main() {
             randyRandom->superGlide();
             randyRandom->spectatorView();
             randyRandom->SkinChange();
-            randyRandom->miniMapRadar();
 
             //check how fast we completed all the processing and if we still have time left to sleep
             int processingTime = static_cast<int>(util::currentEpochMillis() - startTime);
