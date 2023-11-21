@@ -142,7 +142,7 @@ struct Player {
     }
 
     void MapRadar(ConfigLoader* cl, MyDisplay* m_disp) {
-        if (m_disp->keyDown(cl->FEATURE_PRINT_LEVELS_BUTTON) && cl->FEATURE_MAP_RADAR_ON) {
+        if (m_disp->keyDown(cl->FEATURE_MAP_RADAR_BUTTON) && cl->FEATURE_MAP_RADAR_ON) {
         int team = mem::Read<int>(myLocalPlayer->base + OFF_TEAM_NUMBER);
     
             for (int i = 0; i <= 21000; i++) {
