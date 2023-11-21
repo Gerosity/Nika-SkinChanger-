@@ -149,7 +149,6 @@ struct Player {
                 const static int prevTeam = team;
                 if (friendly) {
                     mem::Write<int>(myLocalPlayer->base + OFF_TEAM_NUMBER, 1);
-                    mem::Write<int>(myLocalPlayer->base + OFF_TEAM_NUMBER, prevTeam);
                     mem::Write<int>(base + OFF_TEAM_NUMBER, prevTeam);
                 }
             }
