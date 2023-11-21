@@ -232,18 +232,4 @@ public:
             curTime = mem::Read<float>(m_localPlayer->base + OFFSET_TIME_BASE);
         }                    
     }
-
-    //==================---------------[MINIMAPRADAR]-------------------==================
-    void miniMapRadar() {
-        if (m_display->keyDown(m_configLoader->FEATURE_PRINT_LEVELS_BUTTON) && m_configLoader->FEATURE_MINI_MAP_RADAR_ON) {
-            int team = mem::Read<int>(m_localPlayer->base + OFF_TEAM_NUMBER);
-
-            for (uintptr_t i = 0; i <= 80000; i++) {
-                mem::Write<int>(m_localPlayer->base + OFF_TEAM_NUMBER, 1);
-            }
-            for (uintptr_t i = 0; i <= 80000; i++) {
-                mem::Write<int>(m_localPlayer->base + OFF_TEAM_NUMBER, team);
-            }
-        }
-    }
 };
