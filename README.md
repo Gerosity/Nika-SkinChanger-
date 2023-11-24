@@ -4,10 +4,10 @@ Forked by Gerosity.
 
 All that I have added is an easier way to test/change skin id's for the skin changer. Check Nika.ini for this.
 
-To add this to your fork (or the original Nika):
-1. Look in Random.hpp, lines 187 - 223
-2. Look in ConfigLoader.hpp, lines 43 - 80 and lines 111 - 148
-3. Look in Nika.ini, lines 42 - 82
+I have modified:
+Random.hpp, lines 187 - 223
+ConfigLoader.hpp, lines 43 - 80 and lines 111 - 148
+Nika.ini, lines 42 - 82
 
 By no means am I good at coding.
 I did this for quality of life and for fun
