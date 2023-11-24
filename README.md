@@ -1,3 +1,5 @@
+MAKE SURE TO EDIT YOUR CONFIG (Nika.ini)
+
 Forked by Gerosity.
 
 All that I have added is an easier way to test/change skin id's for the skin changer. Check Nika.ini for this.
