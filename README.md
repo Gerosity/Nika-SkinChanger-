@@ -1,5 +1,7 @@
-Forked by Gerosity
-All that I have added is an easier way to test/change skin id's for the skin changer. Check Nika.ini for this
+Forked by Gerosity.
+
+All that I have added is an easier way to test/change skin id's for the skin changer. Check Nika.ini for this.
+
 To add this to your fork (or the original Nika):
 1. Look in Random.hpp, lines 187 - 223
 2. Look in CibfugKiader.hpp, lines 43 - 80 and lines 111 - 148
