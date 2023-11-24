@@ -40,6 +40,44 @@ struct ConfigLoader {
     bool AIMBOT_ALLOW_TARGET_SWITCH = true;
     int AIMBOT_MAX_DISTANCE = 100;
     int AIMBOT_MIN_DISTANCE = 1;
+    //skin ids - for skinchanger - implemented by Gerosity
+    //Light ammo weapons
+    int SKIN_P2020 = 1;
+    int SKIN_RE45 = 1;
+    int SKIN_ALTERNATOR = 1;
+    int SKIN_R99 = 1;
+    int SKIN_R301 = 1;  
+    int SKIN_SPITFIRE = 1;
+    int SKIN_G7 = 1;
+    //Heavy ammo weapons
+    int SKIN_CARSMG = 1;
+    int SKIN_RAMPAGE = 1;
+    int SKIN_3030 = 1;
+    int SKIN_HEMLOCK = 1;
+    int SKIN_FLATLINE = 1; 
+    //Energy ammo weapons
+    int SKIN_NEMESIS = 1; 
+    int SKIN_VOLT = 1;
+    int SKIN_TRIPLETAKE = 1;
+    int SKIN_LSTAR = 1;
+    int SKIN_DEVOTION = 1;
+    int SKIN_HAVOC = 1;
+    //Sniper ammo weapons
+    int SKIN_SENTINEL = 1;
+    int SKIN_CHARGERIFLE = 1;
+    int SKIN_LONGBOW = 1;
+    //Shotgun ammo weapons
+    int SKIN_MOZAMBIQUE = 1;
+    int SKIN_EVA8 = 1;
+    int SKIN_PEACEKEEPER = 1;
+    int SKIN_MASTIFF = 1;
+    //Legendary ammo weapons
+    int SKIN_WINGMAN = 1;
+    int SKIN_PROWLER = 1;
+    int SKIN_BOCEK = 1;
+    int SKIN_KRABER = 1;
+    int SKIN_THROWINGKNIFE = 1;
+    int SKIN_THERMITEGRENADE = 1;
 
     bool IS_GAME_BR;
 
@@ -69,6 +107,46 @@ struct ConfigLoader {
         AIMBOT_ALLOW_TARGET_SWITCH = (key.compare("AIMBOT_ALLOW_TARGET_SWITCH") != 0) ? AIMBOT_ALLOW_TARGET_SWITCH : toBool(val);
         AIMBOT_MAX_DISTANCE = (key.compare("AIMBOT_MAX_DISTANCE") != 0) ? AIMBOT_MAX_DISTANCE : stoi(val);
         AIMBOT_MIN_DISTANCE = (key.compare("AIMBOT_MIN_DISTANCE") != 0) ? AIMBOT_MIN_DISTANCE : stoi(val);
+        
+        //skin ids - for skinchanger - implemented by Gerosity
+        //Light ammo weapons
+        SKIN_P2020 = (key.compare("SKIN_P2020") != 0) ? SKIN_P2020 : stoi(val);
+        SKIN_RE45 = (key.compare("SKIN_RE45") != 0) ? SKIN_RE45 : stoi(val);
+        SKIN_ALTERNATOR = (key.compare("SKIN_ALTERNATOR") != 0) ? SKIN_ALTERNATOR : stoi(val);
+        SKIN_R99 = (key.compare("SKIN_R99") != 0) ? SKIN_R99 : stoi(val);
+        SKIN_R301 = (key.compare("SKIN_R301") != 0) ? SKIN_R301 : stoi(val);
+        SKIN_SPITFIRE = (key.compare("SKIN_SPITFIRE") != 0) ? SKIN_SPITFIRE : stoi(val);
+        SKIN_G7 = (key.compare("SKIN_G7") != 0) ? SKIN_G7 : stoi(val);
+        //Heavy ammo weapons
+        SKIN_CARSMG = (key.compare("SKIN_CARSMG") != 0) ? SKIN_CARSMG : stoi(val);
+        SKIN_RAMPAGE = (key.compare("SKIN_RAMPAGE") != 0) ? SKIN_RAMPAGE : stoi(val);
+        SKIN_3030 = (key.compare("SKIN_3030") != 0) ? SKIN_3030 : stoi(val);
+        SKIN_HEMLOCK = (key.compare("SKIN_HEMLOCK") != 0) ? SKIN_HEMLOCK : stoi(val);
+        SKIN_FLATLINE = (key.compare("SKIN_FLATLINE") != 0) ? SKIN_FLATLINE : stoi(val);
+        //Energy ammo weapons
+        SKIN_NEMESIS = (key.compare("SKIN_NEMESIS") != 0) ? SKIN_NEMESIS : stoi(val);
+        SKIN_VOLT = (key.compare("SKIN_VOLT") != 0) ? SKIN_VOLT : stoi(val);
+        SKIN_TRIPLETAKE = (key.compare("SKIN_TRIPLETAKE") != 0) ? SKIN_TRIPLETAKE : stoi(val);
+        SKIN_LSTAR = (key.compare("SKIN_LSTAR") != 0) ? SKIN_LSTAR : stoi(val);
+        SKIN_DEVOTION = (key.compare("SKIN_DEVOTION") != 0) ? SKIN_DEVOTION : stoi(val);
+        SKIN_HAVOC = (key.compare("SKIN_HAVOC") != 0) ? SKIN_HAVOC : stoi(val);
+        //Sniper ammo weapons
+        SKIN_SENTINEL = (key.compare("SKIN_SENTINEL") != 0) ? SKIN_SENTINEL : stoi(val);
+        SKIN_CHARGERIFLE = (key.compare("SKIN_CHARGERIFLE") != 0) ? SKIN_CHARGERIFLE : stoi(val);
+        SKIN_LONGBOW = (key.compare("SKIN_LONGBOW") != 0) ? SKIN_LONGBOW : stoi(val);
+        //Shotgun ammo weapons
+        SKIN_MOZAMBIQUE = (key.compare("SKIN_MOZAMBIQUE") != 0) ? SKIN_MOZAMBIQUE : stoi(val);
+        SKIN_EVA8 = (key.compare("SKIN_EVA8") != 0) ? SKIN_EVA8 : stoi(val);
+        SKIN_PEACEKEEPER = (key.compare("SKIN_PEACEKEEPER") != 0) ? SKIN_PEACEKEEPER : stoi(val);
+        SKIN_MASTIFF = (key.compare("SKIN_MASTIFF") != 0) ? SKIN_MASTIFF : stoi(val);
+        //Legendary ammo weapons
+	SKIN_WINGMAN = (key.compare("SKIN_WINGMAN") != 0) ? SKIN_WINGMAN : stoi(val);
+	SKIN_PROWLER = (key.compare("SKIN_PROWLER") != 0) ? SKIN_PROWLER : stoi(val);
+	SKIN_BOCEK = (key.compare("SKIN_BOCEK") != 0) ? SKIN_BOCEK : stoi(val);
+	SKIN_KRABER = (key.compare("SKIN_KRABER") != 0) ? SKIN_KRABER : stoi(val);
+	SKIN_THROWINGKNIFE = (key.compare("SKIN_THROWINGKNIFE") != 0) ? SKIN_THROWINGKNIFE : stoi(val);
+	SKIN_THERMITEGRENADE = (key.compare("SKIN_THERMITEGRENADE") != 0) ? SKIN_THERMITEGRENADE : stoi(val);
+        
         //gameMode
         IS_GAME_BR = (key.compare("IS_GAME_BR") != 0) ? IS_GAME_BR : toBool(val);
         //random
