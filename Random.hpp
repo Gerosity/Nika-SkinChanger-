@@ -185,42 +185,42 @@ public:
         float endTime = curTime +5.5;
         std::map<int, std::vector<int>> weaponSkinMap;
         //Light ammo weapons
-        weaponSkinMap[104] = { 6 };   //WEAPON_P2020 
-        weaponSkinMap[80] = { 6 };   //WEAPON_RE45 
-        weaponSkinMap[79] = { 11 };   //WEAPON_ALTERNATOR 
-        weaponSkinMap[103] = { 2 };   //WEAPON_R99  
-        weaponSkinMap[0] = { 10 };     //WEAPON_R301   
-        weaponSkinMap[105] = { 2 };    //WEAPON_SPITFIRE 
-        weaponSkinMap[88] = { 5 };    //WEAPON_G7 
+        weaponSkinMap[104] = {m_configLoader->SKIN_P2020};   //WEAPON_P2020 
+        weaponSkinMap[80] = {m_configLoader->SKIN_RE45};   //WEAPON_RE45 
+        weaponSkinMap[79] = {m_configLoader->SKIN_ALTERNATOR};   //WEAPON_ALTERNATOR 
+        weaponSkinMap[103] = {m_configLoader->SKIN_R99};   //WEAPON_R99  
+        weaponSkinMap[0] = {m_configLoader->SKIN_R301};     //WEAPON_R301   
+        weaponSkinMap[105] = {m_configLoader->SKIN_SPITFIRE};    //WEAPON_SPITFIRE 
+        weaponSkinMap[88] = {m_configLoader->SKIN_G7};    //WEAPON_G7 
         //Heavy ammo weapons
-        weaponSkinMap[111] = { 10};   // Car-SMG 
-        weaponSkinMap[20] = { 6 };    // Rampage 
-        weaponSkinMap[110] = { 9 };      //3030 
-        weaponSkinMap[89] = {10 };   //WEAPON_HEMLOCK  
-        weaponSkinMap[87] = { 8 };    //FlatLine  
+        weaponSkinMap[111] = {m_configLoader->SKIN_CARSMG};   // Car-SMG
+        weaponSkinMap[20] = {m_configLoader->SKIN_RAMPAGE};    // Rampage 
+        weaponSkinMap[110] = {m_configLoader->SKIN_3030};      //3030 
+        weaponSkinMap[89] = {m_configLoader->SKIN_HEMLOCK};   //WEAPON_HEMLOCK  
+        weaponSkinMap[87] = {m_configLoader->SKIN_FLATLINE};    //FlatLine  
         //Energy ammo weapons
-        weaponSkinMap[112] = { 8 };    //WEAPON_NEMESIS  
-        weaponSkinMap[109] = { 9 };    //WEAPON_VOLT 
-        weaponSkinMap[106] = { 7 };    //WEAPON_TRIPLE_TAKE 
-        weaponSkinMap[92] = { 3 };    //WEAPON_LSTAR 
-        weaponSkinMap[83] = { 5 };    //WEAPON_DEVOTION 
-        weaponSkinMap[85] = { 8 };    //WEAPON_HAVOC 
+        weaponSkinMap[112] = {m_configLoader->SKIN_NEMESIS};    //WEAPON_NEMESIS  
+        weaponSkinMap[109] = {m_configLoader->SKIN_VOLT};    //WEAPON_VOLT 
+        weaponSkinMap[106] = {m_configLoader->SKIN_TRIPLETAKE};    //WEAPON_TRIPLE_TAKE 
+        weaponSkinMap[92] = {m_configLoader->SKIN_LSTAR};    //WEAPON_LSTAR 
+        weaponSkinMap[83] = {m_configLoader->SKIN_DEVOTION};    //WEAPON_DEVOTION 
+        weaponSkinMap[85] = {m_configLoader->SKIN_HAVOC};    //WEAPON_HAVOC 
         //Sniper ammo weapons
-        weaponSkinMap[1] = { 5 };    //WEAPON_SENTINEL 
-        weaponSkinMap[82] = { 8 };    //WEAPON_CHARGE_RIFLE 
-        weaponSkinMap[84] = { 7 };    //WEAPON_LONGBOW 
+        weaponSkinMap[1] = {m_configLoader->SKIN_SENTINEL};    //WEAPON_SENTINEL 
+        weaponSkinMap[82] = {m_configLoader->SKIN_CHARGERIFLE};    //WEAPON_CHARGE_RIFLE 
+        weaponSkinMap[84] = {m_configLoader->SKIN_LONGBOW};    //WEAPON_LONGBOW 
         //Shotgun ammo weapons
-        weaponSkinMap[95] = { 5 };    //WEAPON_MOZAMBIQUE 
-        weaponSkinMap[86] = { 8 };    //WEAPON_EVA8 
-        weaponSkinMap[102] = { 7 };    //WEAPON_PEACEKEEPER 
-        weaponSkinMap[94] = { 5 };    //WEAPON_MASTIFF 
+        weaponSkinMap[95] = {m_configLoader->SKIN_MOZAMBIQUE};    //WEAPON_MOZAMBIQUE 
+        weaponSkinMap[86] = {m_configLoader->SKIN_EVA8};    //WEAPON_EVA8 
+        weaponSkinMap[102] = {m_configLoader->SKIN_PEACEKEEPER};    //WEAPON_PEACEKEEPER 
+        weaponSkinMap[94] = {m_configLoader->SKIN_MASTIFF};    //WEAPON_MASTIFF 
         //Legendary ammo weapons
-        weaponSkinMap[108] = { 5 };    //WEAPON_WINGMAN 
-        weaponSkinMap[101] = { 7 };    //WEAPON_PROWLER
-        weaponSkinMap[2] = { 3 };    //WEAPON_BOCEK
-        weaponSkinMap[91] = { 6 };    //WEAPON_KRABER
-        weaponSkinMap[158] = { 3 };    //WEAPON_THROWING_KNIFE
-        weaponSkinMap[212] = { 2 };    //WEAPON_THERMITE_GRENADE 
+        weaponSkinMap[108] = {m_configLoader->SKIN_WINGMAN};    //WEAPON_WINGMAN 
+        weaponSkinMap[101] = {m_configLoader->SKIN_PROWLER};    //WEAPON_PROWLER
+        weaponSkinMap[2] = {m_configLoader->SKIN_BOCEK};    //WEAPON_BOCEK
+        weaponSkinMap[91] = {m_configLoader->SKIN_KRABER};    //WEAPON_KRABER
+        weaponSkinMap[158] = {m_configLoader->SKIN_THROWINGKNIFE};    //WEAPON_THROWING_KNIFE
+        weaponSkinMap[212] = {m_configLoader->SKIN_THERMITEGRENADE};    //WEAPON_THERMITE_GRENADE 
 
         if (m_configLoader->FEATURE_SKINCHANGER_ON){
             int waponIndex = mem::Read<int>(wep_entity + OFF_WEAPON_INDEX);
