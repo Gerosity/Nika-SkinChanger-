@@ -5,7 +5,7 @@ To add this to your fork (or the original Nika):
 2. Look in CibfugKiader.hpp, lines 43 - 80 and lines 111 - 148
 3. Look in Nika.ini, lines 42 - 82
 
-##By no means am I good at coding.
+By no means am I good at coding.
 I did this for easy access and for fun
 
 README.md (Instructions):
