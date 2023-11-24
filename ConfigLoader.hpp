@@ -61,7 +61,7 @@ struct ConfigLoader {
     int SKIN_TRIPLETAKE = 1;
     int SKIN_LSTAR = 1;
     int SKIN_DEVOTION = 1;
-    int SKIN_HAVOC = 1;
+    int SKIN_HAVOC = 7;
     //Sniper ammo weapons
     int SKIN_SENTINEL = 1;
     int SKIN_CHARGERIFLE = 1;
