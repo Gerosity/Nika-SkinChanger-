@@ -34,7 +34,7 @@ git clone https://github.com/Gerosity/Nika-SkinChanger-
 
 ### 2. Get inside the folder
 ```
-cd Nika
+cd Nika-SkinChanger-
 ```
 
 ### 3. Compile the program:
