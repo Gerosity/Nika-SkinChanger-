@@ -4,7 +4,7 @@ All that I have added is an easier way to test/change skin id's for the skin cha
 
 To add this to your fork (or the original Nika):
 1. Look in Random.hpp, lines 187 - 223
-2. Look in CibfugKiader.hpp, lines 43 - 80 and lines 111 - 148
+2. Look in ConfigLoader.hpp, lines 43 - 80 and lines 111 - 148
 3. Look in Nika.ini, lines 42 - 82
 
 By no means am I good at coding.
