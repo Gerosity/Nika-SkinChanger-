@@ -10,7 +10,7 @@ To add this to your fork (or the original Nika):
 3. Look in Nika.ini, lines 42 - 82
 
 By no means am I good at coding.
-I did this for easy access and for fun
+I did this for quality of life and for fun
 
 README.md (Instructions):
 ## Intall build-essential (Mandatory. You only need to do this once) !!!
