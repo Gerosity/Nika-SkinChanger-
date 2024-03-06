@@ -9,9 +9,6 @@ Random.hpp, lines 187 - 223
 ConfigLoader.hpp, lines 43 - 80 and lines 111 - 148
 Nika.ini, lines 42 - 82
 
-By no means am I good at coding.
-I did this for quality of life and for fun
-
 README.md (Instructions):
 ## Intall build-essential (Mandatory. You only need to do this once) !!!
 ```
